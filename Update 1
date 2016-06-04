@@ -1,0 +1,36 @@
+What I've learnt so far:
+
+I've learnt about the print function which is similar to C.
+
+I've learnt about strings early on for example:
+word = 'Python'
+word[1] = y
+word[:2] = Py
+'S' + word[1:6] = Sython
+etc...
+
+Also learnt about the string length function:
+s = 'ilovedhavingstevenandberniceastutors'
+len(s) = 36
+
+Taught me about lists ie:
+squares = [1, 4, 9, 16, 25, 36]
+If I call the function squares, it'll give me the list.
+You can also concatenate lists like squares + [49, 64, 81].
+
+First proper python code I learnt was:
+>>> #Prints out the fibonaci sequence
+... a, b = 0, 1
+>>> while b < 10:
+...     print(b)
+...     a, b = b, a+b
+...
+1
+1
+2
+3
+5
+8
+
+
+
