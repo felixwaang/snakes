@@ -4,8 +4,10 @@
 def wondrous(x):
   while(x != 1):
     if(x % 2 == 0):
+      print(x)
       return x/2
-      print(x)
+      
     else:
-      return 3*x + 1
       print(x)
+      return 3*x + 1
+      
