@@ -1,0 +1,58 @@
+#Disclaimer; I needed to watcha video lecture on how to do this in python
+#I don't know how to host a webserver using python yet;
+#I've read the documents on python but the process is still iffy so I'll print the picture
+
+import graphics
+
+#defining some variables
+randomiser = 1
+precision = 100
+win_max = 200
+scale = 100
+x_offset = 0
+y_offset = 0
+
+#graph the mandelbrot set
+win = graphics.GraphWin("Mandelbrot", win_max, win_max)
+
+for num_y in range(0, win_max + 1):
+  y = (num_y/(scale)) - ((win_max/2)/scale) + y_offset
+  
+  #boundaries
+  for num_x in range(0, win_max +1):
+    
+    count = 0
+    check = 0
+    
+    x = (num_x/(scale)) - ((win_max/2)/scale) + y_offset
+    
+    z = complex(x, y) ** 2 - randomiser
+    
+    #iterate the set to get the numbers
+    while count < precision:
+      
+      point = graphics.Point(num_x, num_y)
+      
+      z = z ** 2 - c
+      
+      #check and prevent a "blowout"
+      if (abs(z) > 1000000):
+        check = count
+        count = precision
+        
+      count += 1
+    
+    #making it colourful!
+    if (abs(z) <= 1):
+      point.setFill("black")
+    
+    elif (check > 16):
+      point.setFill("orange")
+      
+    elif (check > 5):
+      point.setFill("blue")
+      
+    else:
+      point.setFill("white)
+      
+    point.draw(win)
